@@ -48,7 +48,7 @@ set(UNRAR_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/file.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/filefn.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/filcreat.cpp
-	${CMAKE_SOURCE_DIR}/thirdparty/unrar/archive.cpp
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/archive.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/arcread.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/unicode.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/system.cpp
@@ -57,7 +57,7 @@ set(UNRAR_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/crc.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/rawread.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/encname.cpp
-	${CMAKE_SOURCE_DIR}/thirdparty/unrar/resource.cpp
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/resource.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/match.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/timefn.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/rdwrfn.cpp
@@ -66,7 +66,7 @@ set(UNRAR_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/errhnd.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/rarvm.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/secpassword.cpp
-	${CMAKE_SOURCE_DIR}/thirdparty/unrar/rijndael.cpp
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/rijndael.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/getbits.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/sha1.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/sha256.cpp
