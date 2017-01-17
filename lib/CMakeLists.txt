@@ -18,3 +18,14 @@ find_package(Threads REQUIRED)
 if (Threads_FOUND)
     target_link_libraries(unrar ${CMAKE_THREAD_LIBS_INIT})
 endif ()
+
+install(TARGETS unrar
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib)
+
+install(FILES ${LIB_SPECIFIC_HEADERS} 
+        DESTINATION include/unrar)
+
+# For compatibility's sake.
+install(FILES ${LIB_SPECIFIC_HEADERS} 
+        DESTINATION include)

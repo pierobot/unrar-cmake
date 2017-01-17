@@ -24,6 +24,9 @@ include_directories(${CMAKE_SOURCE_DIR}/thirdparty/unrar)
 
 set(LIB_SPECIFIC_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/dll.cpp)
+set(LIB_SPECIFIC_HEADERS
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/dll.cpp
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/version.hpp)
 
 set(BIN_SPECIFIC_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/recvol.cpp
