@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.12)
 
 project(unrar-cmake CXX)
+set(PROJECT_VERSION "0.1.1")
 
 option(BIN_ONLY "If set to ON, then only the binary will be built.")
 option(LIB_ONLY "If set to ON, then only the library will be built.")
@@ -99,3 +100,12 @@ else ()
     add_subdirectory(bin)
     add_subdirectory(lib)
 endif ()
+
+# uninstall target
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/cmake/cmake_uninstall.cmake"
+    IMMEDIATE @ONLY)
+
+add_custom_target(uninstall
+    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake/cmake_uninstall.cmake)
