@@ -26,6 +26,8 @@ install(TARGETS unrar
 install(FILES ${LIB_SPECIFIC_HEADERS} 
         DESTINATION include/unrar)
 
-# Uncomment this if you really want the headers like this...
-#install(FILES ${LIB_SPECIFIC_HEADERS} 
-#        DESTINATION include)
+# Seems to be common?
+if (INSTALL_HEADERS_TO_ROOT)
+    install(FILES ${LIB_SPECIFIC_HEADERS} 
+            DESTINATION include)
+endif ()
