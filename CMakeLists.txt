@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.12)
 
 project(unrar-cmake CXX)
 
 option(BIN_ONLY "If set to ON, then only the binary will be built.")
 option(LIB_ONLY "If set to ON, then only the library will be built.")
 option(BUILD_STATIC "If set to ON, a static library will be built.")
+option(INSTALL_HEADERS_TO_ROOT "If set to ON, dll.hpp and version.hpp will be copied directly to the root of your include directory.")
 
 if (${CMAKE_CXX_COMPILER_ID} STREQUAL "MSVC")
     add_definitions(-D_SCL_SECURE_NO_WARNINGS
@@ -25,12 +26,11 @@ include_directories(${CMAKE_SOURCE_DIR}/thirdparty/unrar)
 set(LIB_SPECIFIC_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/dll.cpp)
 set(LIB_SPECIFIC_HEADERS
-    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/dll.cpp
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/dll.hpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/version.hpp)
 
 set(BIN_SPECIFIC_SOURCES
-    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/recvol.cpp
-    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/ui.cpp)
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/recvol.cpp)
 
 set(UNRAR_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/rar.cpp
@@ -82,6 +82,7 @@ set(UNRAR_SOURCES
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/threadpool.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/rs16.cpp
     ${CMAKE_SOURCE_DIR}/thirdparty/unrar/cmddata.cpp
+    ${CMAKE_SOURCE_DIR}/thirdparty/unrar/ui.cpp
 )
 
 if (BIN_ONLY)
