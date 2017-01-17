@@ -19,6 +19,12 @@ else ()
     add_definitions(-D_FILE_OFFSET_BITS=64
                     -D_LARGEFILE_SOURCE
                     -DRAR_SMP)
+    
+    
+    if (${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
+    # Ignore some noncritical warnings
+        SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-dangling-else -Wno-logical-op-parentheses -Wno-switch")
+    endif ()
 endif ()
 
 include_directories(${CMAKE_SOURCE_DIR}/thirdparty/unrar)
