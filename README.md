@@ -6,7 +6,6 @@ Clone this repository into your thirdparty directory.
 
 ```cmake
 # CMakeLists.txt
-add_subdirectory(thirdparty/unrar-cmake)
 set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH} thirdparty/unrar-cmake/cmake/modules")
 
 find_package(libunrar REQUIRED)
